@@ -4,6 +4,6 @@ applications:
   memory: 256M
   instances: 1
   path: .
-  command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  command: bundle exec rake db:migrate  && rake db:seed && bundle exec rails s -p $PORT
   services:
   - scf-rails-example-db
